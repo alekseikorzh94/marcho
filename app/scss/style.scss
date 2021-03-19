@@ -4,14 +4,42 @@
 @import 'global';
 
 
+.header{
+    padding: 40px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+      
+    }
+}
+
+.menu{
+    &__list{
+        display: flex;
+    }
+    &__list-item + .menu__list-item{
+        padding-left: 35px;
+    }
+    &__list-link{
+        color: #29282d;
+        padding: 0 2px 5px;
+        text-transform: uppercase;
+    }
+    &__list-link--active{
+        color: $accent-color;
+    }
+}
 
 
 
 
+.user-nav{
+    display: flex;
+    &__link + .user-nav__link{
+        padding-left: 25px;
+    }
+}
 
 
 
 @import 'media';
-
-
-

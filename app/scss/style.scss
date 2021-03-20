@@ -27,11 +27,12 @@
         text-transform: uppercase;
         @extend %quicksand-500;
         border-bottom: 1px solid transparent;
+        letter-spacing: 0.7px;
         &:hover{
             color: $accent;
             border-bottom: 1px solid $accent;
             @extend %quicksand-700;
-            
+            letter-spacing: 0.3px;
         }
     }
     &__list-link--active{

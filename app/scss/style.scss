@@ -596,7 +596,7 @@
         transition: all 0.3s;
         &:hover {
             box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.4);
-            border: 1px solid transparent;
+            border: none;
             .blog__item-link {
                 color: $accent;
             }
@@ -692,7 +692,7 @@
         margin-top: 5px;
         padding: 0 15px;
     }
-    &__btn{
+    &__btn {
         display: block;
         width: 100%;
         border: none;
@@ -705,16 +705,44 @@
         @extend %roboto-400;
         letter-spacing: 2px;
     }
-    &__error{
+    &__error {
         color: $accent;
         margin-top: 15px;
         display: inline-block;
     }
-    &__text{
+    &__text {
         margin-bottom: 35px;
     }
 }
 
-
+.page-404{
+    padding: 115px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content{
+        max-width: 570px;
+        width: 100%;
+    }
+    &__title{
+        color: #28384f;
+        @extend %roboto-700;
+        font-size: 48px;
+        margin-bottom: 40px;
+        
+    }
+    &__text{
+        max-width: 470px;
+        margin-bottom: 55px;
+    }
+    &__link{
+        display: inline-block;
+        @extend %btn;
+        padding: 15px 30px;
+        letter-spacing: 0;
+    }
+}
 
 @import "media";

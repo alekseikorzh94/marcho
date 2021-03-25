@@ -1,9 +1,9 @@
 html,
-body{
+body {
     height: 100%;
 }
 
-body{
+body {
     @extend %quicksand-500;
     font-size: 16px;
     line-height: 26px;
@@ -12,24 +12,23 @@ body{
     flex-direction: column;
 }
 
-.main{
+.main {
     flex-grow: 1;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
 }
 
-a{
+a {
     @extend %quicksand-500;
     font-size: 16px;
     line-height: 26px;
     color: $default;
 }
 
-.title{
+.title {
     text-align: center;
     @extend %roboto-700;
     font-size: 48px;
@@ -39,8 +38,52 @@ a{
     margin-bottom: 10px;
 }
 
-.text{
+.text {
     text-align: center;
     max-width: 570px;
     margin: 0 auto 55px;
+}
+
+.breadcrumbs{
+    display: inline-flex;
+    justify-content: center;
+    padding-left: 25px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 3px;
+        left: 0;
+        background-image: url('../images/icons/home-icon.svg');
+
+    }
+    &__list{
+        display: flex;
+    }
+    &__item{
+        color: #727272;
+        padding-right: 40px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 10px;
+            background-image: url('../images/icons/angle-right.svg');
+            right: 15px;
+            top: 9px;
+        }
+        &:last-child{
+            color: $accent;
+            padding-right: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+    &__link{
+        color: inherit;
+    }
 }

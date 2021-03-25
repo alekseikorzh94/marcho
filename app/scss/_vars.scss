@@ -3,32 +3,32 @@ $default: #8d8d8d;
 $title: #29282d;
 $bg: #f6f6f6;
 
-%quicksand-400{
-    font-family: 'Quicksand-Regular', sans-serif;
+%quicksand-400 {
+    font-family: "Quicksand-Regular", sans-serif;
     font-weight: 400;
 }
 
-%quicksand-500{
-    font-family: 'Quicksand-Medium', sans-serif;
+%quicksand-500 {
+    font-family: "Quicksand-Medium", sans-serif;
     font-weight: 500;
 }
 
-%quicksand-700{
-    font-family: 'Quicksand-Bold', sans-serif;
+%quicksand-700 {
+    font-family: "Quicksand-Bold", sans-serif;
     font-weight: 700;
 }
 
-%roboto-400{
-    font-family: 'Roboto-Regular', sans-serif;
+%roboto-400 {
+    font-family: "Roboto-Regular", sans-serif;
     font-weight: 400;
 }
 
-%roboto-700{
-    font-family: 'Roboto-Bold', sans-serif;
+%roboto-700 {
+    font-family: "Roboto-Bold", sans-serif;
     font-weight: 700;
 }
 
-%btn{
+%btn {
     padding: 14px 18px;
     @extend %roboto-400;
     letter-spacing: 2px;
@@ -39,9 +39,18 @@ $bg: #f6f6f6;
 }
 
 @function max($numbers...) {
-  @return m#{a}x(#{$numbers});
+    @return m#{a}x(#{$numbers});
 }
 @function min($numbers...) {
-  @return m#{i}n(#{$numbers});
+    @return m#{i}n(#{$numbers});
 }
 
+%link {
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    color: $title;
+    border: 1px solid $accent;
+    padding: 15px 25px;
+    display: inline-block;
+    
+}

@@ -1,0 +1,132 @@
+@media (max-width: 1200px) {
+  .header {
+    &__inner {
+      padding-right: 15px;
+      
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .menu {
+    order: 1;
+    margin-left: 40px;
+    &__list {
+      transform: translateY(-200%);
+      position: absolute;
+      width: 100%;
+      top: 120px;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      z-index: 5;
+      transition: all .3s;
+      &.menu__list--active{
+        transform: translateY(0%);
+        transition: all .3s;
+      }
+    }
+    &__list-item + .menu__list-item{
+      padding-left: 15px;
+    }
+    &__list-item{
+      text-align: center;
+      width: 100%;
+      padding: 15px;
+
+    }
+    &__list-link{
+      display: block;
+     
+      
+    }
+    &__btn{
+      width: 30px;
+      height: 22px;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 0;
+      &::after,
+      &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $title;
+      }
+      &::before{
+        top: 0;
+      }
+      &::after{
+        bottom: 0;
+      }
+      span{
+        width: 30px;
+        
+        height: 2px;
+        background-color: $title;
+      }
+    }
+    
+  }
+  .user-nav{
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .header{
+    &__inner{
+      padding-right: 0;
+    }
+  }
+  .menu{
+    order: 0;
+    &__list{
+      top: 140px;
+    }
+  }
+  .user-nav{
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 35px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 1180px){
+  .footer-top{
+    justify-content: center;
+    flex-wrap: wrap;
+    &__item-form{
+      max-width: 680px;
+      width: 100%;
+      margin-top: 30px;
+    }
+    &__contact{
+      width: 100%;
+      text-align: center;
+    }
+    &__logo{
+      display: inline-block;
+      text-align: center;
+    }
+    &__social-list{
+    width: 700px;
+    justify-content: center;
+    margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 7200px){
+  .footer-bottom{
+    display: block;
+    text-align: center;
+    min-height: 75px;
+  }
+}

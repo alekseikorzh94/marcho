@@ -10,10 +10,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 
 .menu {
+  &__btn{
+    display: none;
+  }
   &__list {
     display: flex;
   }
@@ -72,6 +76,7 @@
   padding: 70px 0 40px;
   border-bottom: 1px solid #ececec;
   display: flex;
+  
   &__contact {
     width: 240px;
     margin-right: 50px;
